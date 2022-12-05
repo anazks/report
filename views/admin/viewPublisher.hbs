@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/table.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        {{> nav}}
+ <div id="wrapper" style="margin-top:20px">
+  {{!-- <h1>Sortable Table of Search Queries</h1> --}}
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>Name</span></th>
+        <th><span>Address</span></th>
+        <th><span>Birth</span></th>
+        <th><span>Baptism</span></th>
+        <th><span>Category</span></th>
+         <th><span>More</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each Publisher}}
+      <tr>
+        <td class="lalign">{{this.name}}</td>
+      
+        <td>{{this.address}}</td>
+        <td>{{this.dob}}</td>
+        <td>{{this.dobb}}</td>
+         <td>{{this.category}}/{{this.category2}}</td>
+        <td><a href="/addReport/{{this._id}}/{{this.name}}/{{this.category}}" class="btn btn-outline-warning">ADD</a>&nbsp;<a href="/viewProfile/{{this._id}}" class="btn btn-outline-primary">VIEW</a></td>
+
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+ </div> 
+</body>
+</body>
+</html>

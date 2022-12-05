@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:white;">
+    {{> nav}}
+            <div class="container" style="margin-top:10px;padding-left:15%">
+                <div class="row">
+                <div class="col-sm-4">
+                    <a href="" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD PUBLISHER</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="/viewPublisher" class="btn btn-outline-warning">VIEW PUBLISHERS</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="" class="btn btn-outline-warning">VIEW REPORTS</a>
+                </div>
+                {{!-- <div class="col-sm-3">
+                    <a href="/addReport" class="btn btn-outline-warning">ADD REPORTS</a>
+                </div> --}}
+            </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                         <div class="box">
+                            <h3 class="subHead">
+                                TOTAL PUBLISHERS
+                            </h3>
+                            <h1 style="color:black;">{{admin.publishers}}</h1>
+                        </div>
+                </div>
+                 <div class="col-sm-6">
+                         <div class="box">
+                             <h3 class="subHead">
+                                    TOTAL PIONEERS
+                            </h3>
+                                <h1 style="color:black;">{{admin.pioneers}}</h1>
+                               <a href="#" class="btn btn-outline-primary">GENERATE REPORT</a>
+
+                        </div>
+                </div>
+                 <div class="col-sm-6">
+                         <div class="box">
+                             <h3 class="subHead">
+                                TOTAL HOURS
+                            </h3>
+                                <h1 style="color:black">{{admin.totalh}}</h1>
+                            <a href="/generateTotalHR/{{admin.totalh}}" class="btn btn-outline-primary">GENERATE REPORT</a>
+
+                        </div>
+                </div>
+                 <div class="col-sm-6">
+                         <div class="box">
+                             <h3 class="subHead">
+                                TOTAL PIONEER HOURS
+                            </h3>
+                        <h1 style="color:black;">{{admin.phtotal}}</h1>
+                     <a href="#" class="btn btn-outline-primary">GENERATE REPORT</a>
+
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        {{!-- models --}}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    {{!-- <div class="modal-content">
+      <div class="modal-header"> --}}
+        {{!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> --}}
+       
+      </div>
+      <div class="modal-body">
+        <div class="login-page">
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="form">
+    <form class="login-form" action="/addPublisher" method="post">
+    <label for="">Name</label>
+      <input type="text" placeholder="name" name="name"/>
+       <label for="">Addres</label>
+      <input type="text" placeholder="address" name="address"/>
+       <label for="">Date of Birth</label>
+      <input type="date" placeholder="DOB" name="dob"/>
+       <label for="">Date of Babtism</label>
+      <input type="date" placeholder="date of Baptism" name="dobb"/>
+        <select name="category" id="" style="width:100%;">
+             <option value="PUBLISHER">SPIRITUAL STATUS</option>
+            <option value="RP">RP</option>
+            <option value="AP">AP</option>
+            <option value="SP">SP</option>
+            <option value="none">none</option>
+        </select>
+       
+        <select name="category2" id="" style="width:100%;height:30px;margin-top:10px">
+             <option value="PUBLISHER">SPIRITUAL STATUS</option>
+            <option value="MS">MS</option>
+            <option value="ELDER">ELDER</option>
+            <option value="PUBLISHER">PUBLISHER</option>
+            <option value="PUBLISHER">None</option>
+        </select>
+      <button style="margin-top:20px">ADD</button>
+    </form>
+  </div>
+</div>
+      </div>
+    </div>
+  {{!-- </div>
+</div> --}}
+        
+</body>
+</html>

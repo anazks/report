@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/table.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        {{> nav}}
+        <div style="width:100%;text-align:center" >
+            <a href="#" class="btn btn-outline-primary" style="margin-top:10px;">DOWNLOAD REPORT</a>
+        </div>
+ <div id="wrapper" style="margin-top:20px">
+  {{!-- <h1>Sortable Table of Search Queries</h1> --}}
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>Name</span></th>
+        <th><span>Month</span></th>
+        <th><span>Hours</span></th>
+        <th><span>Publication</span></th>
+        <th><span>Rv</span></th>
+         <th><span>Study</span></th>
+         <th><span>Vedio</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each HoursReport}}
+      <tr>
+        <td class="lalign">{{this.name}}</td>
+      
+        <td>{{this.month}}</td>
+        <td>{{this.hours}}</td>
+        <td>{{this.publication}}</td>
+        <td>{{this.rv}}</td>
+        <td>{{this.study}}</td>
+        <td>{{this.vedio}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+ </div> 
+</body>
+</body>
+</html>

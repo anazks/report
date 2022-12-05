@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <title>Document</title>
+</head>
+<body>
+	{{> nav}}
+    <div class="container d-flex justify-content-center">
+    <div class="card p-3 py-4">
+        <div class="text-center"> 
+		<img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" width="100" class="rounded-circle">
+            <h3 class="mt-2">{{pubData.name}}</h3>
+			<span class="mt-1 clearfix">{{pubData.category2}}</span>
+			
+			<div class="row mt-3 mb-3">
+			
+			  <div class="col-md-4">
+				<h5>DOB</h5>
+				<span class="num">{{pubData.dob}}</span>
+			  </div>
+			  <div class="col-md-4">
+			  <h5>BABTISM</h5>
+				<span class="num">{{pubData.dobb}}</span>
+			  </div>
+			  <div class="col-md-4">
+			  <h5>CATE</h5>
+				<span class="num">{{pubData.category}}</span>
+			  </div>
+			
+			</div>
+			
+			<hr class="line">
+			
+			<small class="mt-4">{{pubData.address}}</small>
+              <div class="social-buttons mt-5"> 
+			   <button class="neo-button"><i class="fa fa-facebook fa-1x"></i> </button> 
+			   <button class="neo-button"><i class="fa fa-linkedin fa-1x"></i></button> 
+			   <button class="neo-button"><i class="fa fa-google fa-1x"></i> </button> 
+			   <button class="neo-button"><i class="fa fa-youtube fa-1x"></i> </button>
+			   <button class="neo-button"><i class="fa fa-twitter fa-1x"></i> </button>
+			  </div>
+			  
+			 <div class="profile mt-5">
+			 <a href="/reportHistory/{{pubData.id}}" class="btn btn-danger">Report History</a>
+			 {{!-- <button class="profile_button px-5">View feild service Reports</button> --}}
+
+		</div>
+			   
+        </div>
+    </div>
+</div>
+</body>
+</html>
